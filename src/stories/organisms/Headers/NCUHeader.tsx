@@ -48,7 +48,7 @@ type NCUHeaderProps = {
 
 export const NCUHeader = ({links}: NCUHeaderProps) => {
     return (
-        <AppBar sx={{ bgcolor: 'white' }} position='static'>
+        <AppBar sx={{ bgcolor: 'white' }} elevation={0} position='static'>
             <CssBaseline />
             <Toolbar>
                 <CustomizedLogo variant='h4'>

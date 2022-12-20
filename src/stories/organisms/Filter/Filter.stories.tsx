@@ -1,21 +1,23 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { FeedItem } from './FeedItem';
+import { Filter } from './Filter';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Molecules/FeedItem',
-  component: FeedItem,
+  title: 'Organisms/Filter',
+  component: Filter,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-} as ComponentMeta<typeof FeedItem>;
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+} as ComponentMeta<typeof Filter>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof FeedItem> = (args) => <FeedItem {...args} />;
+const Template: ComponentStory<typeof Filter> = (args) => <Filter {...args} />;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  imgSrc: 'https://via.placeholder.com/75',
-  feedActivity: 'Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum ponderum?',
+  filters: ['Time','Engagement','Indsutry','Experience'],
 };

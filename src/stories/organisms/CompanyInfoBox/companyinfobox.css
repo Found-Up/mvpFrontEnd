@@ -2,7 +2,8 @@
     background: #FFFFFF;
     border: 1.41832px solid #FFFFFF;
     border-radius: 9.45549px;
-
+    box-shadow: 0px 4px 20px 0px #8B919B;
+    
     max-width: 611px;
     max-height: 471px;
 }
