@@ -1,0 +1,115 @@
+.ProfileCard-container {
+    border-radius: 5px;
+
+    width: auto;
+    height: 649px;
+    max-width: 1180px;
+    max-height: 649px;
+
+    box-shadow: 0px 4px 20px 0px #8B919B;
+
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.ProfileCard-header {
+    display: flex;
+    
+}
+
+.ProfileCard-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 148px;
+    margin-left: 107px;
+
+
+
+}
+
+.ProfileCard-text-container h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 39px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+}
+
+.ProfileCard-text-container h3 {
+    font-weight: 500;
+    font-size: 31px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: #737B7D;
+
+    margin-top: 27px;
+    margin-bottom: 23px;
+}
+
+.ProfileCard-text-container p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #737B7D;
+}
+
+.ProfileCard-img {
+    margin-top: 137px;
+    margin-right: 152px;
+    margin-left: 167px;
+
+    border-radius: 50%;
+    background-color: #F3F6FA;
+
+    width: 240px;
+    height: 240px;
+}
+
+.ProfileCard-button-container {
+    display: flex;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 102px;
+}
+
+.ProfileCard-main-buttons a {
+    font-weight: 300;
+    font-size: 14px;
+
+    margin-left: 28px;
+}
+
+.ProfileCard-links {
+    margin-left: 370px;
+
+}
+
+.ProfileCard-skill-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    
+}
+
+.ProfileCard-skill {
+    display: flex;
+    align-items: center;
+}
+
+.ProfileCard-skill img {
+    width: 70.5px;
+    height: 70.5px;
+
+    background-color: #F3F6FA;
+    border-radius: 50%;
+}
+
+.ProfileCard-skill p {
+    margin-left: 20.7px;
+}
+
+
