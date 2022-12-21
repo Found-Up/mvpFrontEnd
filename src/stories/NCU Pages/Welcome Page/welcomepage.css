@@ -1,0 +1,25 @@
+.WelcomePage-Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+    
+}
+.WelcomePage-Body {
+    display: flex;
+    gap: 38px;
+    justify-content: center;
+    background: #F3F6FA;
+}
+.WelcomePage-FeedContainer {
+    display: flex;
+    flex-direction: column;
+}
+.WelcomePage-Feed {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.WelcomePage-CompInfoBox {
+    margin-top: 50px;
+}
