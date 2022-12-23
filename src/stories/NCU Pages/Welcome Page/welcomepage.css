@@ -1,0 +1,63 @@
+.WelcomePage-GrayDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(60, 100, 177, .06);
+    gap: 65px;
+    padding-top: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 150px;
+}
+
+.WelcomePage-TxtBtnGroup {
+    font-family: 'Apercu';
+    font-style: normal;
+}
+
+.WelcomePage-TxtBtnGroup h1 {
+    font-weight: 500;
+    font-size: 61px;
+    line-height: 120%;
+    /* or 73px */
+
+    letter-spacing: 0.02em;
+
+    /* Light / Black */
+
+    color: #373F41;
+}
+
+.WelcomePage-TxtBtnGroup p {
+    font-family: 'Apercu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 150%;
+    /* or 38px */
+
+    letter-spacing: 0.02em;
+
+    /* Light / Gray dark */
+
+    color: #737B7D;
+}
+
+.WelcomePage-WhiteDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    padding-top: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 150px;
+}
+
+.WelcomePage-ColElem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
