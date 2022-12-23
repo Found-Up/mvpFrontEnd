@@ -3,21 +3,11 @@ import React from 'react';
 import { BaseHeader } from '../organisms/Headers/BaseHeader';
 import './page.css';
 
-type User = {
-  name: string;
-};
-
 export const Page: React.VFC = () => {
-  const [user, setUser] = React.useState<User>();
 
   return (
     <article>
-      <Header
-        user={user}
-        onLogin={() => setUser({ name: 'Jane Doe' })}
-        onLogout={() => setUser(undefined)}
-        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
-      />
+      <BaseHeader links={['Home', 'Features', 'Process', 'Discover', 'Feedback']}/>
 
       <section>
         <h2>Pages in Storybook</h2>
