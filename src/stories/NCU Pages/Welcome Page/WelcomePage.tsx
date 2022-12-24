@@ -67,8 +67,6 @@ export const WelcomePage = ({user}: WelcomePageProps) => {
                 <div>
                     {/* TODO: Company logo section */}
                 </div>
-            </div>
-            <div className='WelcomePage-GrayDiv WelcomePage-ColElem'>
                 <h1>Join the community</h1>
                 <p>Get connected on FoundUp within minutes. Signing up and connecting with companies is free.</p>
                 <Button primary={true} label='Sign Up'></Button>
