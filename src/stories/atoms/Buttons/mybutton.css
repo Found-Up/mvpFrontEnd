@@ -1,0 +1,35 @@
+.MyButton {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+  }
+  .MyButton--primary {
+    color: white;
+    background-color: #3C64B1;
+  }
+  .MyButton--secondary {
+    color: #3C64B1;
+    background-color: transparent;
+    box-shadow: #3C64B1 0px 0px 0px 1px inset;
+  }
+  .MyButton--small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+  .MyButton--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+  .MyButton--large {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+  .MyButton--square {
+    border-radius: 0;
+  }
+  .MyButton--round {
+    border-radius: 17px;
+  }

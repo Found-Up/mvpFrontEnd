@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from '../../atoms/Buttons/Button';
+import { MyButton } from '../../atoms/Buttons/MyButton';
+import { Primary, Secondary } from '../../atoms/Buttons/MyButton.stories';
 import './profileCard.css';
 
 
@@ -26,14 +27,14 @@ export const ProfileCard = ({fullName, tagline, description} : profileCardProps)
             
             <div className='ProfileCard-button-container'>
                 <div className="ProfileCard-main-buttons">
-                    <Button label='Message' primary={true} size='large' />
-                    <Button label='Save' size='large'/>
+                    <MyButton label='Message' primary={true} size='large' />
+                    <MyButton label='Save' primary={false} size='large'/>
                     <a href="">View Resume</a>
                 </div>
                 
                 <div className="ProfileCard-links">
-                    <Button label='Portfolio' size='large'/>
-                    <Button label='Github' size='large'/>
+                    <MyButton label='Portfolio' primary={false} shape='round' size='large'/>
+                    <MyButton label='Github' primary={false} shape='round' size='large'/>
                 </div>
             </div>
             <div className="ProfileCard-skill-container">
