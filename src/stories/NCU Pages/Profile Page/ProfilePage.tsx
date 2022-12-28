@@ -31,8 +31,10 @@ export const ProfilePage = ({user} : ProfilePageProps) => {
                 </div>
                 <div className="ProfilePage-exp-edu-container">
                     <div className="ProfilePage-Exp-container">
-                        <WorkOutlineIcon/>
-                        <h4>Experience</h4>
+                        <div className="Exp-heading-container">
+                            <WorkOutlineIcon/>
+                            <h4>Experience</h4>
+                        </div>
                         <ExpCard
                             expImgSrc=''
                             role='Software Engineer'
@@ -54,8 +56,10 @@ export const ProfilePage = ({user} : ProfilePageProps) => {
                     </div>
 
                     <div className="ProfilePage-Edu-container">
-                        <SchoolOutlinedIcon/>
-                        <h4>Education</h4>
+                        <div className="Edu-heading-container">
+                            <SchoolOutlinedIcon/>
+                            <h4>Education</h4>
+                        </div>
                         <EduCard
                             eduImgSrc=''
                             major='Computer Engineer'
