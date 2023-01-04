@@ -18,6 +18,7 @@ export const MessageFeedItem = ({recieverName, date, message, imgSrc, bookMarked
     } else {
         bookmark = <BookmarkBorderOutlinedIcon></BookmarkBorderOutlinedIcon>
     }
+    
     return (
         <div className='MessageFeedItem-Container'>
             <img className='MessageFeedItem-Image' src={imgSrc} alt='ProfileImage'></img>

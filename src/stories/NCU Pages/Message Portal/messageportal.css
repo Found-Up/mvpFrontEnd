@@ -19,4 +19,6 @@
     flex-direction: column;
     overflow: hidden;
     gap: 45px;
+    padding: 10px;
+
 }
