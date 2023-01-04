@@ -1,0 +1,22 @@
+.MessagePortal-Head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.MessagePortal-Body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* Main/Blue */
+    background: rgb(60, 100, 175, 0.06);
+    display: flex;
+    gap: 38px;
+    justify-content: space-evenly;
+}
+.MessagePortal-Feed {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 45px;
+}

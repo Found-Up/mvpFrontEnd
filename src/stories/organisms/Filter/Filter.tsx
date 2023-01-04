@@ -3,14 +3,22 @@ import './filter.css';
 import { InputLabel, MenuItem, FormControl, Select, Checkbox, ListItemText, Typography, FormControlLabel, Switch } from '@mui/material'
 
 type FilterProps = {
+    name: string,
     filters: string[],
+    sortBy: boolean,
 };
 
-export const Filter = ({filters}: FilterProps) => {
+export const Filter = ({name, filters, sortBy}: FilterProps) => {
+    let sortByOption;
+    if (sortBy) {
+        sortByOption = <FormControlLabel control={<Switch defaultChecked/>} label='Sort By Recommened'></FormControlLabel>;
+    } else {
+        sortByOption = null;
+    }
     return (
         <div className='filter-container'>
             <Typography>
-                Filters
+                {name}
             </Typography>
             <FormControl sx={{ width: 159}} variant='standard' >
                 <InputLabel>{filters[0]}</InputLabel>
@@ -48,7 +56,7 @@ export const Filter = ({filters}: FilterProps) => {
                     </MenuItem>
                 </Select>
             </FormControl>
-            <FormControlLabel control={<Switch defaultChecked/>} label='Sort By Recommened'></FormControlLabel>
+            {sortByOption}
         </div>
     );
 };
