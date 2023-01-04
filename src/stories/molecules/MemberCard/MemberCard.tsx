@@ -1,5 +1,5 @@
 import React from 'react';
-import './MemberCard.css';
+import './memberCard.css';
 
 
 type memberCardProps = {

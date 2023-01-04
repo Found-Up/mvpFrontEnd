@@ -20,12 +20,23 @@ export const ProfileCard = ({fullName, tagline, description} : profileCardProps)
                     <h1>{fullName}</h1>
                     <h3>{tagline}</h3>
                     <p>{description}</p>
+                    <div className="ProfileCard-main-buttons">
+                        <MyButton label='Message' primary={true} size='large' />
+                        <MyButton label='Save' primary={false} size='large' leftIcon='bookmark'/>
+                        <a href="">View Resume</a>
+                    </div>
                 </div>
-
-                <img className='ProfileCard-img' src="./logo192.png" alt="" />
+                <div className="ProfileCard-img-container">
+                    <img className='ProfileCard-img' src="./logo192.png" alt="" />
+                    <div className="ProfileCard-links">
+                        <MyButton label='Portfolio' primary={false} shape='round' size='large' rightIcon='link'/>
+                        <MyButton label='Github' primary={false} shape='round' size='large' rightIcon='link'/>
+                </div>
+                </div>
+                
             </div>
             
-            <div className='ProfileCard-button-container'>
+            {/* <div className='ProfileCard-button-container'>
                 <div className="ProfileCard-main-buttons">
                     <MyButton label='Message' primary={true} size='large' />
                     <MyButton label='Save' primary={false} size='large'/>
@@ -36,7 +47,8 @@ export const ProfileCard = ({fullName, tagline, description} : profileCardProps)
                     <MyButton label='Portfolio' primary={false} shape='round' size='large'/>
                     <MyButton label='Github' primary={false} shape='round' size='large'/>
                 </div>
-            </div>
+            </div> */}
+            
             <div className="ProfileCard-skill-container">
                 <div className="ProfileCard-skill">
                     <img src="./logo192.png" alt="" />
