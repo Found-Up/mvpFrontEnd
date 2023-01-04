@@ -15,47 +15,27 @@ export const Filter = ({name, filters, sortBy}: FilterProps) => {
     } else {
         sortByOption = null;
     }
+
+    const filterList = filters.map((filterName) => 
+        <FormControl sx={{ width: 159}} variant='standard' >
+            <InputLabel>{filterName}</InputLabel>
+            <Select disableUnderline={true} >
+                <MenuItem key='Example' value='0'>
+                    <Checkbox checked={false} />
+                    <ListItemText primary='Example' />
+                </MenuItem>
+            </Select>
+        </FormControl>
+    );
+
     return (
         <div className='filter-container'>
             <Typography>
                 {name}
             </Typography>
-            <FormControl sx={{ width: 159}} variant='standard' >
-                <InputLabel>{filters[0]}</InputLabel>
-                <Select disableUnderline={true} >
-                    <MenuItem key='Example' value='0'>
-                        <Checkbox checked={false} />
-                        <ListItemText primary='Example' />
-                    </MenuItem>
-                </Select>
-            </FormControl>
-            <FormControl sx={{ width: 159}} variant='standard' >
-                <InputLabel>{filters[1]}</InputLabel>
-                <Select disableUnderline={true} >
-                    <MenuItem key='Example' value='0'>
-                        <Checkbox checked={false} />
-                        <ListItemText primary='Example' />
-                    </MenuItem>
-                </Select>
-            </FormControl>
-            <FormControl sx={{ width: 159}} variant='standard' >
-                <InputLabel>{filters[2]}</InputLabel>
-                <Select disableUnderline={true} >
-                    <MenuItem key='Example' value='0'>
-                        <Checkbox checked={false} />
-                        <ListItemText primary='Example' />
-                    </MenuItem>
-                </Select>
-            </FormControl>
-            <FormControl sx={{ width: 159}} variant='standard' >
-                <InputLabel>{filters[3]}</InputLabel>
-                <Select disableUnderline={true} >
-                    <MenuItem key='Example' value='0'>
-                        <Checkbox checked={false} />
-                        <ListItemText primary='Example' />
-                    </MenuItem>
-                </Select>
-            </FormControl>
+            <>
+                {filterList}
+            </>
             {sortByOption}
         </div>
     );
