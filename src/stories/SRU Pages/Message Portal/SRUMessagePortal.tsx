@@ -4,6 +4,7 @@ import { Footer } from '../../organisms/Footer/Footer';
 import { SRUHeader } from '../../organisms/Headers/SRUHeader';
 
 import './srumessageportal.css';
+import { SearchBar } from '../../molecules/SearchBar/SearchBar';
 
 type SRUMessagePortalProps = {
     user: string,
@@ -16,7 +17,7 @@ export const SRUMessagePortal = ({user, messages}: SRUMessagePortalProps) => {
             <SRUHeader links={['Home', 'Messages', 'Profile', 'Notifications']}></SRUHeader>
             <div className='SRUMessagePortal-Body'>
                 <div className='SRUMessagePortal-MessageFeed'>
-                    {/* TODO: Make search bar */}
+                    <SearchBar label=''/>
                     <MessageFeedItem recieverName='Candidate Name' 
                     date='Jan 3' 
                     message='Lorem ipsum dolor sit amet, consecte...'
