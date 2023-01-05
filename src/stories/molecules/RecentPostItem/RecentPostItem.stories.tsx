@@ -5,7 +5,7 @@ import { RecentPostItem } from './RecentPostItem';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/RecentPostItem',
+  title: 'molecules/RecentPostItem',
   component: RecentPostItem,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {

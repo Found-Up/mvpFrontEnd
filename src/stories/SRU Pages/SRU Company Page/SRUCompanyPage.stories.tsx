@@ -5,7 +5,7 @@ import { SRUCompanyPage } from './SRUCompanyPage';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/SRUCompanyPage',
+  title: 'SRU Pages/SRUCompanyPage',
   component: SRUCompanyPage,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {

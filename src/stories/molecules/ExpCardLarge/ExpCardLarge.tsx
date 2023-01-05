@@ -2,6 +2,7 @@ import React from 'react';
 import './expCardLarge.css';
 
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { ArrowRight } from '@material-ui/icons';
 
 type expCardLargeProps = {
     expImgSrc : string
@@ -18,7 +19,7 @@ export const ExpCardLarge = ({expImgSrc, role, company, description} : expCardLa
             <div className="text-container">
                 <h1>{role} @ {company}</h1>
                 <p>{description}</p>
-                <a href="">Read more about {company} </a>
+                <a href="">Read more about {company}  </a>
             </div>
             
         </div>
