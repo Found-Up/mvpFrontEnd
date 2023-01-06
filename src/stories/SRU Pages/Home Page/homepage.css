@@ -1,0 +1,53 @@
+.HomePage-Body {
+    background: rgb(60, 100, 175, 0.06);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    gap: 65px;
+}
+
+.HomePage-Statistics {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.HomePage-KPIs {
+    background: white;
+    padding: 60px
+}
+
+.HomePage-Suggestions {
+    background: white;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 139% */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    letter-spacing: 0.283665px;
+    color: #737B7D;
+    padding: 5px;
+}
+
+.HomePage-Articles {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 139% */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 0.283665px;
+    background: white;
+    color: #737B7D;
+    padding: 5px;
+}

@@ -1,0 +1,27 @@
+.Graph-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height, or 149% */
+
+    letter-spacing: 149%;
+
+    color: #000000;
+
+    max-width: 276px;
+    max-height: 168px;
+}
+
+.Graph-Box {
+    background: rgba(244, 244, 244, 1);
+    max-width: 276px;
+    max-height: 146px;
+    min-width: 276px;
+    min-height: 146px;
+}

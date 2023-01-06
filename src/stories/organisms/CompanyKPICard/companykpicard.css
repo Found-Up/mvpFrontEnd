@@ -1,0 +1,35 @@
+.CompanyKPICard-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 397px;
+    max-height: 777px;
+    background: white;
+}
+
+.CompanyKPICard-Link {
+    margin-top: 32px;
+    padding-left: 50%;
+    margin-bottom: 40px;
+}
+
+.CompanyKPICard-Title {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 21px;
+    /* identical to box height, or 104% */
+
+    letter-spacing: 0.283665px;
+
+    color: #000000;
+    padding-right: 40%;
+}
+
+.CompanyKPICard-Graphs {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
