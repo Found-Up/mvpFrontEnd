@@ -1,6 +1,10 @@
 node {
     def app
 
+    environment {
+        DOCKERHUB_CREDENTIALS=credentials('docker-hub-credentials')
+    }
+
     stage('Clone repo') {
 
         checkout scm
@@ -16,8 +20,12 @@ node {
         }
     }
 
+    stage('Login') {
+        sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+    }
+
     stage('Push image') {
-        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+        docker.withRegistry('https://registry.hub.docker.com') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
