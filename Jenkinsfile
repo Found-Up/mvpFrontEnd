@@ -11,7 +11,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("foundupdevopssetup")
+        app = docker.build("malvero2/foundupdevopssetup:latest")
     }
 
     stage('Test Image') {
@@ -20,14 +20,9 @@ node {
         }
     }
 
-    stage('Login') {
-        sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-    }
-
     stage('Push image') {
-        docker.withRegistry('https://registry.hub.docker.com') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+        withDockerRegistry([ credentialsId: "docker-hub-credentials", url: ""]) {
+            docker.push()
         }
     }
 }
