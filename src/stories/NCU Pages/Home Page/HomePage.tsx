@@ -14,7 +14,7 @@ export const HomePage = ({user}: HomePageProps ) => {
         <div>
             <div className='HomePage-Header'>
                 <NCUHeader links={['Home','Messages','Profile','Notifications']}></NCUHeader>
-                <Filter filters={['Time', 'Engagement', 'Industry', 'Experience']}></Filter>
+                <Filter name='Filters' filters={['Time', 'Engagement', 'Industry', 'Experience']} sortBy={true}></Filter>
             </div>
             <div className='HomePage-Body'>
                 <div className='HomePage-FeedContainer'>
