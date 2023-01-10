@@ -1,0 +1,46 @@
+.RecentPostItem-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    padding: 30px 50px;
+    width: 1180px;
+    height: 142px;
+    max-width: 1180px;
+    max-height: 142px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px 0px #8B919B;
+}
+
+.RecentPostItem-container img {
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    background-color: #F3F6FA;
+}
+
+
+.post-text {
+    font-family: Mulish;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.28px;
+
+    width: 600px;
+    text-align: left;
+}
+
+.post-date {
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.28px;
+
+
+    align-self: flex-start;
+    margin-left: auto;
+}

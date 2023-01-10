@@ -41,9 +41,19 @@
     flex-direction: column;
     gap: 45px;
 }
+.Exp-heading-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
 .ProfilePage-Edu-container {
     display: flex;
     flex-direction: column;
     gap: 45px;
+}
+.Edu-heading-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }

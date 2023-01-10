@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from '../../atoms/Buttons/Button';
+import { MyButton } from '../../atoms/Buttons/MyButton';
+import { Primary, Secondary } from '../../atoms/Buttons/MyButton.stories';
 import './profileCard.css';
 
 
@@ -19,23 +20,35 @@ export const ProfileCard = ({fullName, tagline, description} : profileCardProps)
                     <h1>{fullName}</h1>
                     <h3>{tagline}</h3>
                     <p>{description}</p>
+                    <div className="ProfileCard-main-buttons">
+                        <MyButton label='Message' primary={true} size='large' />
+                        <MyButton label='Save' primary={false} size='large' leftIcon='bookmark'/>
+                        <a href="">View Resume</a>
+                    </div>
                 </div>
-
-                <img className='ProfileCard-img' src="./logo192.png" alt="" />
+                <div className="ProfileCard-img-container">
+                    <img className='ProfileCard-img' src="./logo192.png" alt="" />
+                    <div className="ProfileCard-links">
+                        <MyButton label='Portfolio' primary={false} shape='round' size='large' rightIcon='link'/>
+                        <MyButton label='Github' primary={false} shape='round' size='large' rightIcon='link'/>
+                </div>
+                </div>
+                
             </div>
             
-            <div className='ProfileCard-button-container'>
+            {/* <div className='ProfileCard-button-container'>
                 <div className="ProfileCard-main-buttons">
-                    <Button label='Message' primary={true} size='large' />
-                    <Button label='Save' size='large'/>
+                    <MyButton label='Message' primary={true} size='large' />
+                    <MyButton label='Save' primary={false} size='large'/>
                     <a href="">View Resume</a>
                 </div>
                 
                 <div className="ProfileCard-links">
-                    <Button label='Portfolio' size='large'/>
-                    <Button label='Github' size='large'/>
+                    <MyButton label='Portfolio' primary={false} shape='round' size='large'/>
+                    <MyButton label='Github' primary={false} shape='round' size='large'/>
                 </div>
-            </div>
+            </div> */}
+            
             <div className="ProfileCard-skill-container">
                 <div className="ProfileCard-skill">
                     <img src="./logo192.png" alt="" />
