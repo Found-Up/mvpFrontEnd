@@ -1,0 +1,15 @@
+.SRUMessagePortal-Body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* Main/Blue */
+    background: rgb(60, 100, 175, 0.06);
+    display: flex;
+    gap: 11px;
+    justify-content: space-evenly;
+}
+
+.SRUMessagePortal-MessageFeed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

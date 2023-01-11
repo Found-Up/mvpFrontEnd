@@ -1,0 +1,67 @@
+.page {
+    position: relative;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    background: #F3F6FA;
+}
+
+.ProfilePage-ProfileCard-container {
+    margin-top: 75.54px;
+    
+}
+
+.Exp-heading-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    font-family: Mulish;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.28px;
+    text-align: left;
+    color: #737B7D;
+   
+}
+
+.ProfilePage-Exp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.Posts-heading-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+    font-family: Mulish;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.28px;
+    text-align: left;
+    color: #737B7D;
+}
+
+.RecentPosts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    color: #737B7D;
+
+    margin-bottom: 180px;
+}
+

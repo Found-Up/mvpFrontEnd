@@ -18,6 +18,7 @@
 
     display: flex;
     align-items: center;
+    gap: 38px;
     letter-spacing: 0.224028px;
 
     color: #373F41;

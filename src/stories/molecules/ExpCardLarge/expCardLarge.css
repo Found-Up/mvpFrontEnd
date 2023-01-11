@@ -1,0 +1,59 @@
+.ExpCardLarge-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 20px 100px;
+    border-radius: 17px;
+
+    width: 1180px;
+    height: 384px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px 0px #8B919B;
+}
+
+.ExpCardLarge-img {
+    width: 174px;
+    height: 174px;
+
+    background-color: #F3F6FA;
+    border-radius: 50%;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-container h1 {
+    font-family: Mulish;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: left;
+    color: #737B7D;
+
+    margin: 0;
+
+}
+
+.text-container p {
+    font-family: Apercu;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #737B7D;
+
+}
+
+.text-container a {
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: right;
+    text-decoration: none;
+    color: #737B7D;
+}

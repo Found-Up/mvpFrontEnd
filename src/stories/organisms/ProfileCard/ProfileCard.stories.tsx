@@ -20,6 +20,6 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   fullName : 'Matthew Chin',
-  tagline : 'Fuck it we ball Fuck it we ball Fuck it we ball Fuck it we ball',
+  tagline : 'I am a computer engineer and love to code',
   description : 'Currently a computer engineer @ FoundUp previously a computer engineer @ FoundDown'
 };
