@@ -13,7 +13,7 @@ type memberCardProps = {
 export const MemberCard = ({memberImgSrc, name, role, date} : memberCardProps) => {
     return (
         <div className='MemberCard-container'>
-            <img className='MemberCard-img' src="MemberImgSrc" alt="" />
+            <img className='MemberCard-img' src={memberImgSrc} alt="" />
             <div className="MemberCard-body">
                 <h3>{name}</h3>
                 <p>{role}</p>

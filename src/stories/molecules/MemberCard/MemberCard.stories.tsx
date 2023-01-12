@@ -19,5 +19,8 @@ const Template: ComponentStory<typeof MemberCard> = (args) => <MemberCard {...ar
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  
+  memberImgSrc : './logo192.png',
+  name : 'Matthew Chin',
+  role : 'Software Engineer',
+  date : 'Jan 2022 - Current'
 };
