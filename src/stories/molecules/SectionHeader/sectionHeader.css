@@ -1,0 +1,11 @@
+.SectionHeader {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #737B7D;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
