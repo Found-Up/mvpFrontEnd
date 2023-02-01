@@ -26,7 +26,7 @@
     align-self: center;
 }
 
-.ProfilePage-exp-edu-container {
+.ProfilePage-bgInfo-container {
     display: flex;
     justify-content: space-between;
     align-self: center;
@@ -56,4 +56,15 @@
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+.Tabs {
+    
+}
+
+.ProfilePage-showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 40px;
 }
