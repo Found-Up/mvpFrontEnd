@@ -6,13 +6,13 @@ type VideoItemProps = {
     thumbnailSrc : string,
     title : string,
     time : string,
-    videoSrc : string
-
+    onClick?: () => void;
+    
 }
 
-export const VideoItem = ({thumbnailSrc, title, time} : VideoItemProps) => {
+export const VideoItem = ({thumbnailSrc, title, time, ...props} : VideoItemProps) => {
     return (
-        <div className="VideoItem-container">
+        <div className="VideoItem-container" {...props}>
             <div className="VideoItem-thumbnail">
                 <img src={thumbnailSrc} alt="" />
             </div>

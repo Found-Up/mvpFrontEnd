@@ -5,7 +5,7 @@ import { VideoItem } from './VideoItem';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/VideoItem',
+  title: 'molecules/VideoItem',
   component: VideoItem,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {

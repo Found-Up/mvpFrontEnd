@@ -1,16 +1,46 @@
 .ShowcaseCard-container {
     width: 1180px;
+    
 }
 
 .ShowcaseCard-heading {
     display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #737B7D;
     
+    margin-bottom: 30px;
+}
+
+.edit-button {
+    position: absolute;
+    right: 10px;
+}
+.edit-button :hover {
+    background-color: #dbdbdb5b;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .VideoReel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    background-color: #FFFFFF;
+    border-radius: 17.71px;
+    width: 1180px;
+    height: 384px;
+    
 }
 
 .VideoReel {
+    display: flex;
+    gap: 10px;
 
 }
