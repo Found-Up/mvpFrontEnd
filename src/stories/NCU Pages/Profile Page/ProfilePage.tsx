@@ -47,6 +47,19 @@ export const ProfilePage = ({user} : ProfilePageProps) => {
 
                 {selectedTab === 0 && 
                     <div className="ProfilePage-bgInfo-container">
+                        <div className="ProfilePage-Edu-container">
+                            <div className="Edu-heading-container">
+                                <SchoolOutlinedIcon/>
+                                <h4>Education</h4>
+                            </div>
+                            <EduCard
+                                eduImgSrc=''
+                                major='Computer Engineer'
+                                school='Texas A&M University'
+                                date='2018 - 2022'
+                            ></EduCard>
+                        </div>
+
                         <div className="ProfilePage-Exp-container">
                             <div className="Exp-heading-container">
                                 <WorkOutlineIcon/>
@@ -70,19 +83,6 @@ export const ProfilePage = ({user} : ProfilePageProps) => {
                                 company='Pond'
                                 date='Jan 2021 - Current'
                             ></ExpCard>
-                        </div>
-
-                        <div className="ProfilePage-Edu-container">
-                            <div className="Edu-heading-container">
-                                <SchoolOutlinedIcon/>
-                                <h4>Education</h4>
-                            </div>
-                            <EduCard
-                                eduImgSrc=''
-                                major='Computer Engineer'
-                                school='Texas A&M University'
-                                date='2018 - 2022'
-                            ></EduCard>
                         </div>
 
                         <div className="ProfilePage-Certifications">
