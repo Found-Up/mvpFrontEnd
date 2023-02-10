@@ -1,15 +1,50 @@
 .VidSubmissionPage-Body {
-    margin-top: 5px;
     display: flex;
-    gap: 112px;
-    justify-content: center;
     background: #F3F6FA;
-    margin-bottom: 5px;
+    justify-content: center;
 }
 
-.VidSubmissionPage-VidBox {
+.VidSubmissionPage-content {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    
+}
+
+.VidSubmissionPage-InfoBox-container {
+    
+
+}
+
+.VidSubmissionPage-VidBox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.VidSubmissionPage-Vid-container {
+    background-color: #D7D7D7;
+    max-width: 513px;
+    max-height: 953px;
+}
+
+.VidSubmissionPage-Vid-container img {
+    object-fit: contain;
+    width: 513px;
+    height: 953px;
+}
+
+
+
+
+
+/* .VidSubmissionPage-VidBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
-}
+} */
