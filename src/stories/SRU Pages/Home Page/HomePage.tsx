@@ -72,9 +72,9 @@ export const HomePage = ({user, graphs}: HomePageProps) => {
                 </div>
                 <div className='HomePage-Statistics'>
                     <div className='HomePage-KPIs'>
-                        <CompanyKPICard graphLink={graphs[0]} companyName={user}></CompanyKPICard>
-                        <CompanyKPICard graphLink={graphs[1]} companyName={user}></CompanyKPICard>
-                        <CompanyKPICard graphLink={graphs[2]} companyName={user}></CompanyKPICard>
+                        <CompanyKPICard graphLink={graphs[0]} categoryName={user}></CompanyKPICard>
+                        <CompanyKPICard graphLink={graphs[1]} categoryName={user}></CompanyKPICard>
+                        <CompanyKPICard graphLink={graphs[2]} categoryName={user}></CompanyKPICard>
                     </div>
                     <div className='HomePage-Suggestions'>
                         <p>Suggestions</p>
