@@ -51,3 +51,22 @@
     color: #737B7D;
     padding: 5px;
 }
+
+.HomePage-Activity {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.HomePage-ActivityFeed {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.HomePage-TrendingQuestions {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}

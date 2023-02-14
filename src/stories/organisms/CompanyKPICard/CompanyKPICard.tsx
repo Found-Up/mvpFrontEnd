@@ -3,19 +3,19 @@ import { Graph } from '../../molecules/Graph/Graph';
 import './companykpicard.css';
 
 type CompanyKPICardProps = {
-    graphLinks: string[],
+    graphLink: string,
     companyName: string,
 }
 
-export const CompanyKPICard = ({graphLinks, companyName}: CompanyKPICardProps) => {
-    const KPIGraphs = graphLinks.map((links) => 
-        <Graph title='A graph title' link={links}></Graph> 
-    )
+export const CompanyKPICard = ({graphLink, companyName}: CompanyKPICardProps) => {
+    const KPIGraph =
+        <Graph title='A graph title' link={graphLink}></Graph> 
+
     return (
         <div className='CompanyKPICard-Container'>
             <h1 className='CompanyKPICard-Title'>{companyName} KPI's</h1>
             <div className='CompanyKPICard-Graphs'>
-                {KPIGraphs}
+                {KPIGraph}
             </div>
             <p className='CompanyKPICard-Link'>View all</p>
         </div>

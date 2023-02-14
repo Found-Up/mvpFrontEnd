@@ -58,7 +58,7 @@ export const QuestionPoster = ({expanded, question, tags, duration, responsesToA
     const [quickQuestionTemplate, setquickQuestionTemplate] = useState('');
     const [responses, setResponses] = useState<number[]>([0, 100]);
 
-    const handleExpand = () => {
+    const handleQuestionPosterExpand = () => {
         setExpanded((prev) => !prev);
     };
 
@@ -87,7 +87,7 @@ export const QuestionPoster = ({expanded, question, tags, duration, responsesToA
             <div id='QuestionPoster-Header'>
                 {!isExpanded &&
                     <div className='container-Minimized'>
-                        <IconButton aria-label='expand' onClick={handleExpand}>
+                        <IconButton aria-label='expand' onClick={handleQuestionPosterExpand}>
                             <CircleIcon fontSize='large'></CircleIcon>
                         </IconButton>
                         <TextField fullWidth variant="outlined" placeholder='Ask a question' />

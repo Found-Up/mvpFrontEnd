@@ -19,6 +19,6 @@ const Template: ComponentStory<typeof CompanyKPICard> = (args) => <CompanyKPICar
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  graphLinks: ['Graph 1', 'Graph 2', 'Graph 3'],
+  graphLink: 'GRAPHLINK',
   companyName: 'Company',
 };
