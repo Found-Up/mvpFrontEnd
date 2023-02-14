@@ -1,0 +1,41 @@
+#QuestionPoster-Container {
+    background: #FFFFFF;
+    border: 1.41832px solid #FFFFFF;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 11px -2px #8B919B;
+    max-width: 850px;
+    padding: 30px;
+}
+
+#QuestionPoster-HeaderExanded {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-Minimized {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+#QuestionPoster-QuickQuestionExpanded {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+}
+
+.sliderAndInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+#QuestionPoster-Footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
