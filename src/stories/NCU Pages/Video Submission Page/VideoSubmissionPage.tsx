@@ -6,16 +6,35 @@ import { Footer } from '../../organisms/Footer/Footer';
 import './videosubmissionpage.css';
 import { Button } from '../../atoms/Buttons/Button';
 import { ReactMediaRecorder, useReactMediaRecorder } from 'react-media-recorder';
+import VideoRecorder from 'react-video-recorder';
 
 
 type VideoSubmissionProps = {
     user: string;
 };
 
+const RecordView = () => {
+    const { 
+        status, startRecording, stopRecording, mediaBlobUrl 
+    } = useReactMediaRecorder({
+        video: true
+    });
+
+    return (
+        <div>
+            <p>{status}</p>
+            <button onClick={startRecording}>Start Recording</button>
+            <button onClick={stopRecording}>Stop Recording</button>
+            <video src={mediaBlobUrl} width={513} height={953} controls autoPlay loop />
+        </div>
+    );
+};
+
+
+
 export const VideoSubmissionPage = ({user}: VideoSubmissionProps) => {
 
-    const {status, startRecording, stopRecording, mediaBlobUrl} = useReactMediaRecorder({video: true})
-
+    
     return (
         <div>
             <NCUHeader links={['Home','Messages','Profile','Notifications']}></NCUHeader>
@@ -31,12 +50,12 @@ export const VideoSubmissionPage = ({user}: VideoSubmissionProps) => {
 
                     <div className="VidSubmissionPage-VidBox-container">
                         <div className="VidSubmissionPage-Vid-container">
-                            <div>
-                                <p>{status}</p>
-                                <video src={mediaBlobUrl} width={513} height={953} controls autoPlay loop />
-                                <button onClick={startRecording}>Start Recording</button>
-                                <button onClick={stopRecording}>Stop Recording</button>
-                            </div>
+                        {/* <VideoRecorder
+                            onRecordingComplete={(videoBlob) => {
+                            // Do something with the video...
+                            console.log("videoBlob", videoBlob);
+                            }}
+                        /> */}
 
                         </div>
 
