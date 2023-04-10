@@ -1,11 +1,16 @@
-.SignIn-body {
 
-}
 
 .SignIn-content-container {
-    display: flex;
+    width: 500px;
+    box-shadow: 0px 4px 20px 0px #8B919B;
+    margin: auto;
+    /* margin-top: 160px;
+    margin-bottom: 160px; */
+    border-radius: 10px;
+    
 }
 
 .SignIn-content {
-
+    padding: 50px 100px;
 }
+

@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.SignInForm-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.SignInForm-container h1 {
+    text-align: center;
+    padding: 0 0 30px 0;
+}
+
+.SignInForm-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* align-items: center; */
+}
+
+form .text-field {
+    border-bottom: 2px solid #928B80;
+}
+
+.text-field input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.SignInForm-container input {
+    width: 372px;
+    height: 50px;
+}
+
+.SignInForm-container input::placeholder {
+    padding-left: 10px;
+    color: #928B80;
+}
+
+.forgot-password a {
+    margin-left: 10px;
+    color: #2956AD;
+    text-decoration: none;
+}
+
+.SignInForm-container button {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 20px;
+    background: #2956AD;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.signup-link {
+    text-align: center;
+}
