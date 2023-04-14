@@ -44,7 +44,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v2
       with:
         aws-access-key-id: ${{ secrets.S3_ACCESS }}
-        aws-secret-acces-key: ${{ secret.S3_SECRET_ACCES }}
+        aws-secret-acces-key: ${{ secret.S3_SECRET_ACCESS }}
         aws-region: us-east-1
 
     - name: Upload Build Artifact to S3 Bucket
