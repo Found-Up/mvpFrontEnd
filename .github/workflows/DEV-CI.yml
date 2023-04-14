@@ -47,11 +47,11 @@ jobs:
     #     aws-secret-access-key: ${{ secrets.S3_SECRET_ACCESS }}
     #     aws-region: us-east-1
 
-    - name: Install AWS CLI
-      run: |
-        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-        unzip awscliv2.zip
-        sudo ./aws/install
+    # - name: Install AWS CLI
+    #   run: |
+    #     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    #     unzip awscliv2.zip
+    #     sudo ./aws/install
 
     - name: Upload build artifact to S3
       run: |
