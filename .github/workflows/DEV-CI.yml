@@ -59,6 +59,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS }}
+        AWS_DEFAULT_REGION: us-east-1
 
     # - name: Upload Build Artifact to S3 Bucket
     #   uses: jakejarvis/s3-sync-action@v0.5.1
