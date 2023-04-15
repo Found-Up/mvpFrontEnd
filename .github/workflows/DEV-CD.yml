@@ -40,6 +40,10 @@ jobs:
       run: |
         tar -xzvf ${{ env.LATEST_OBJECT }}
 
+    - name: List current working directory contents
+      run: |
+        ls -la
+
     - name: Deploy to EC2 instance
       uses: appleboy/ssh-action@v0.1.10
       with:
