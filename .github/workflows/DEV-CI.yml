@@ -1,0 +1,72 @@
+name: DEV-CI
+run-name: DEV-CI ran by @${{ github.actor }}
+
+on:
+  push:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout branch
+      uses: actions/checkout@v3
+    
+    - name: Setup Node.js 16.x
+      uses: actions/setup-node@v3
+    
+    - name: Install packages
+      uses: Borales/actions-yarn@v4.2.0
+      with:
+        cmd: install
+
+    - name: Build the project
+      uses: Borales/actions-yarn@v4.2.0
+      with:
+        cmd: build
+    
+    - name: Run tests
+      uses: Borales/actions-yarn@v4.2.0
+      with:
+        cmd: test
+    
+    - name: Compress build artifacts
+      env:
+        COMMIT_AUTHOR: ${{ github.actor }}
+      run: |
+        DATE=$(date +%Y%m%d_%H%M%S)
+        FILENAME="build_${DATE}_${COMMIT_AUTHOR}.tar.gz"
+        tar -czvf $FILENAME build/
+        echo "FILENAME=$FILENAME" >> $GITHUB_ENV
+
+    # - name: Configure AWS credentials
+    #   uses: aws-actions/configure-aws-credentials@v2
+    #   with:
+    #     aws-access-key-id: ${{ secrets.S3_ACCESS }}
+    #     aws-secret-access-key: ${{ secrets.S3_SECRET_ACCESS }}
+    #     aws-region: us-east-1
+
+    # - name: Install AWS CLI
+    #   run: |
+    #     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    #     unzip awscliv2.zip
+    #     sudo ./aws/install
+
+    - name: Upload build artifact to S3
+      run: |
+        aws s3 cp ${{ env.FILENAME }} s3://fup0414.artifactrepo/artifacts/${{ env.FILENAME}}
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS }}
+        AWS_DEFAULT_REGION: us-east-1
+
+    # - name: Upload Build Artifact to S3 Bucket
+    #   uses: jakejarvis/s3-sync-action@v0.5.1
+    #   env:
+    #     AWS_S3_BUCKET: fup0414.artifactrepo
+    #     AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS }}
+    #     AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS }}
+    #     AWS_REGION: 'us-east-1'
+    #     SOURCE_DIR: '${{ env.FILENAME }}'
+    #     DEST_DIR: 'frontendArtifacts'
