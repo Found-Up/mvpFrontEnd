@@ -42,6 +42,7 @@ jobs:
 
     - name: List current working directory contents
       run: |
+        cd build/
         ls -la
 
     - name: Deploy to EC2 instance
@@ -53,5 +54,5 @@ jobs:
         script: |
           sudo systemctl stop nginx
           sudo rm -rf /var/www/html/*
-          sudo cp -R ${{ github.workspace }}/build/* /var/www/html/
+          sudo cp -R ${GITHUB_WORKSPACE}/build/* /var/www/html/
           sudo systemctl start nginx
