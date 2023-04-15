@@ -38,8 +38,7 @@ jobs:
 
     - name: Uncompress build artifacts
       run: |
-        LOCAL_FILENAME=$(basename ${{ env.LATEST_OBJECT }})
-        tar -xzvf $LOCAL_FILENAME
+        tar -xzvf ${{ env.LATEST_OBJECT }}
         BUILD_DIR="build"
         mv */ $BUILD_DIR
 
