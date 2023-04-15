@@ -3,9 +3,8 @@ run-name: Deploy initiated by ${{ github.actor }}
 
 on:
   workflow_run:
-    workflows: ["DEV-CI"]
-    types:
-      - completed
+    workflows: [DEV-CI]
+    types: [completed]
 
 jobs:
   deploy:
