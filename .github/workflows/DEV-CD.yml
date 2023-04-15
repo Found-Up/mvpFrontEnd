@@ -37,7 +37,11 @@ jobs:
         AWS_DEFAULT_REGION: us-east-1
 
     - name: Uncompress build artifacts
-      run: tar -xzvf ${{ env.LATEST_OBJECT }}
+      run: |
+        LOCAL_FILENAME=$(basename ${{ env.LATEST_OBJECT }})
+        tar -xzvf $LOCAL_FILENAME
+        BUILD_DIR="build"
+        mv */ $BUILD_DIR
 
     - name: Deploy to EC2 instance
       uses: appleboy/ssh-action@master
