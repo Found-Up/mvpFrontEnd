@@ -16,16 +16,21 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
     
-    - name: Get build artifact name
+    - name: Get the latest build artifact
       run: |
-        COMMIT_AUTHOR=${{ github.event.workflow_run.head_commit.author.username }}
-        COMMIT_TIMESTAMP=${{ github.event.workflow_run.head_commit.timestamp }}
-        DATE=$(date -u -d "$COMMIT_TIMESTAMP" +%Y%m%d_%H%M%S)
-        FILENAME="build_${DATE}_${COMMIT_AUTHOR}.tar.gz"
-        echo "FILENAME=$FILENAME" >> $GITHUB_ENV
-    
+        LATEST_OBJECT=$(aws s3api list-objects-v2 \
+          --bucket fup0414.artifactrepo \
+          --prefix artifacts/ \
+          --query 'Contents[?Size>`0`].[Key, LastModified]' \
+          --output json | jq -r 'sort_by(.[1]) | reverse | .[0][0]' | head -1)
+        echo "LATEST_OBJECT=$LATEST_OBJECT" >> $GITHUB_ENV
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS }}
+        AWS_DEFAULT_REGION: us-east-1
+      
     - name: Download build artifact from s3
-      run: aws s3 cp s3://fup0414.artifactrepo/artifacts/${{ env.FILENAME }} ${{ env.FILENAME }}
+      run: aws s3 cp s3://fup0414.artifactrepo/${{ env.LATEST_OBJECT }} ${{ env.LATEST_OBJECT }}
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS }}
