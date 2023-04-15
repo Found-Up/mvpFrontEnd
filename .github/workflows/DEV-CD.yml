@@ -48,6 +48,6 @@ jobs:
         key: ${{ secrets.REMOTE_SSH_KEY }}
         script: |
           sudo systemctl stop nginx
-          rm -rf /var/www/html/*
-          cp -r build/* /var/www/html/
+          sudo rm -rf /var/www/html/*
+          sudo cp -r build/* /var/www/html/
           sudo systemctl start nginx
