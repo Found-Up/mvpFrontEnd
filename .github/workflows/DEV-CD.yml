@@ -39,8 +39,6 @@ jobs:
     - name: Uncompress build artifacts
       run: |
         tar -xzvf ${{ env.LATEST_OBJECT }}
-        BUILD_DIR="build"
-        mv */ $BUILD_DIR
 
     - name: Deploy to EC2 instance
       uses: appleboy/ssh-action@master
