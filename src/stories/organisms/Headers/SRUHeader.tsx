@@ -12,7 +12,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { SearchBar } from '../../molecules/SearchBar/SearchBar';
 
 const CustomizedLinks = styled(Link)({
@@ -49,40 +49,42 @@ type SRUHeaderProps = {
 
 export const SRUHeader = ({links}: SRUHeaderProps) => {
     return (
-        <AppBar sx={{ bgcolor: 'white' }} elevation={0} position='static'>
-            <CssBaseline />
-            <Toolbar>
-                <CustomizedLogo variant='h4'>
-                    Logo
-                </CustomizedLogo>
-                <SearchBar label='Search'></SearchBar>
-                <CustomizedDiv>
-                    <Router>
-                        <LinkContainer>
-                            <HomeOutlinedIcon sx={{ color: '#373F41' }} />
-                            <CustomizedLinks to='/'>{links[0]}</CustomizedLinks>
-                        </LinkContainer>
-                        <LinkContainer>
-                            <EmailOutlinedIcon sx={{ color: '#373F41' }} />
-                            <CustomizedLinks to='/'>{links[1]}</CustomizedLinks>
-                        </LinkContainer>
-                        <LinkContainer>
-                            <AccountCircleOutlinedIcon sx={{ color: '#373F41' }} />
-                            <CustomizedLinks to='/'>{links[2]}</CustomizedLinks>
-                        </LinkContainer>
-                        <LinkContainer>
-                            <NotificationsNoneOutlinedIcon sx={{ color: '#373F41' }} />
-                            <CustomizedLinks to='/'>{links[3]}</CustomizedLinks>
-                        </LinkContainer>
-                        <IconButton>
-                            <MenuOutlinedIcon sx={{ color: '#373F41' }} />
-                        </IconButton>
-                    </Router>
-                    
-                </CustomizedDiv>
+        <>
+            <AppBar sx={{ bgcolor: 'white' }} elevation={0} position='static'>
+                <CssBaseline />
+                <Toolbar>
+                    <CustomizedLogo variant='h4'>
+                        <Link to='/SRU/Home'>Logo</Link>
+                    </CustomizedLogo>
+                    <SearchBar label='Search'></SearchBar>
+                    <CustomizedDiv>
+                            <LinkContainer>
+                                <HomeOutlinedIcon sx={{ color: '#373F41' }} />
+                                <CustomizedLinks to='/SRU/Home'>{links[0]}</CustomizedLinks>
+                            </LinkContainer>
+                            <LinkContainer>
+                                <EmailOutlinedIcon sx={{ color: '#373F41' }} />
+                                <CustomizedLinks to='/SRU/Messages'>{links[1]}</CustomizedLinks>
+                            </LinkContainer>
+                            <LinkContainer>
+                                <AccountCircleOutlinedIcon sx={{ color: '#373F41' }} />
+                                <CustomizedLinks to='/SRU/CompanyProfile'>{links[2]}</CustomizedLinks>
+                            </LinkContainer>
+                            <LinkContainer>
+                                <NotificationsNoneOutlinedIcon sx={{ color: '#373F41' }} />
+                                <CustomizedLinks to='/SRU'>{links[3]}</CustomizedLinks>
+                            </LinkContainer>
+                            <IconButton>
+                                <MenuOutlinedIcon sx={{ color: '#373F41' }} />
+                            </IconButton>                   
+                    </CustomizedDiv>
 
-                
-            </Toolbar>
-        </AppBar>
+                    
+                </Toolbar>
+            </AppBar>
+            <div>
+                <Outlet />
+            </div>
+        </>
     )
 };

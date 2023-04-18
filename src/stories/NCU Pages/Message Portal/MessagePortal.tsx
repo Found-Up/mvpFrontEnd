@@ -1,5 +1,4 @@
 import React from 'react';
-import { NCUHeader } from '../../organisms/Headers/NCUHeader';
 import { Filter } from '../../organisms/Filter/Filter';
 import { Footer } from '../../organisms/Footer/Footer';
 import { MessageFeedItem } from '../../molecules/MessageFeedItem/MessageFeedItem';
@@ -14,7 +13,6 @@ export const MessagePortal = ({user, messages}: MessagePortalProps) => {
     return (
         <div>
             <div className='MessagePortal-Head'>
-                <NCUHeader links={['Home', 'Messages', 'Profile', 'Notifications']} />
                 <Filter sortBy={false} name='Sort' filters={['Unread', 'Industry']} />
             </div>
             <div className='MessagePortal-Body'>

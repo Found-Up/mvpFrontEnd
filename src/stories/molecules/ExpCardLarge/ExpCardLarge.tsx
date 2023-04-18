@@ -2,7 +2,6 @@ import React from 'react';
 import './expCardLarge.css';
 
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import { ArrowRight } from '@material-ui/icons';
 
 type expCardLargeProps = {
     expImgSrc : string
