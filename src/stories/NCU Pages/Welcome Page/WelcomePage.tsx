@@ -1,18 +1,16 @@
 import React from 'react';
-import { BaseHeader } from '../../organisms/Headers/BaseHeader';
 import { Button } from '../../atoms/Buttons/Button';
 import { FeedItem } from '../../molecules/FeedItem/FeedItem';
 import './welcomepage.css';
 
 
 type WelcomePageProps = {
-    user: string
+    user?: string
 }
 
 export const WelcomePage = ({user}: WelcomePageProps) => {
     return (
-        <div>
-            <BaseHeader links={['Home', 'Features', 'Process', 'Discover', 'Feedback']}/>
+        <>
             <div className='WelcomePage-GrayDiv'>
                 <div className='WelcomePage-TxtBtnGroup'>
                     <h1>Be You. Get Found. Build Together</h1>
@@ -71,6 +69,6 @@ export const WelcomePage = ({user}: WelcomePageProps) => {
                 <p>Get connected on FoundUp within minutes. Signing up and connecting with companies is free.</p>
                 <Button primary={true} label='Sign Up'></Button>
             </div>
-        </div>
+        </>
     )
 };

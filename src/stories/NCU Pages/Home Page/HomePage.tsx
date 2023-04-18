@@ -13,7 +13,6 @@ export const HomePage = ({user}: HomePageProps ) => {
     return (
         <div>
             <div className='HomePage-Header'>
-                <NCUHeader links={['Home','Messages','Profile','Notifications']}></NCUHeader>
                 <Filter name='Filters' filters={['Time', 'Engagement', 'Industry', 'Experience']} sortBy={true}></Filter>
             </div>
             <div className='HomePage-Body'>

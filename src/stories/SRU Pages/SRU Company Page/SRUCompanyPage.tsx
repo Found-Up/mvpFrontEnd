@@ -1,5 +1,4 @@
 import React from 'react';
-import { NCUHeader } from '../../organisms/Headers/NCUHeader';
 import { Footer } from '../../organisms/Footer/Footer';
 import { CompanyCard } from '../../organisms/CompanyCard/CompanyCard';
 import { MemberCard } from '../../molecules/MemberCard/MemberCard';
@@ -14,10 +13,6 @@ type sruCompanyPageProps = {
 export const SRUCompanyPage = ({} : sruCompanyPageProps) => {
     return (
         <div className="CompanyPage-page">
-            <div className="CompanyPage-page-header">
-                <NCUHeader links={['Home', 'Messages', 'Profile', 'Notifications']}></NCUHeader>
-            </div>
-
             <div className="CompanyPage-page-body">
                 <div className="CompanyPage-CompanyCard-container">
                     <CompanyCard 

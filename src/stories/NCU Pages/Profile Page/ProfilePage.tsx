@@ -1,5 +1,4 @@
 import React from 'react';
-import { NCUHeader } from '../../organisms/Headers/NCUHeader';
 import { Footer } from '../../organisms/Footer/Footer';
 import { ProfileCard } from '../../organisms/ProfileCard/ProfileCard';
 import { EduCard } from '../../molecules/EduCard/EduCard';
@@ -16,9 +15,6 @@ type ProfilePageProps = {
 export const ProfilePage = ({user} : ProfilePageProps) => {
     return (
         <div className="ProfilePage-page">
-            <div className="ProfilePage-header">
-                <NCUHeader links={['Home', 'Messages', 'Profile', 'Notifications']}></NCUHeader>
-            </div>
             <div className="ProfilePage-body">
                 <div className="ProfilePage-ProfileCard-container">
                     <ProfileCard 

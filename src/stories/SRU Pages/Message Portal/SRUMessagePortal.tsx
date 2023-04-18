@@ -1,8 +1,6 @@
 import React from 'react';
 import { MessageFeedItem } from '../../molecules/MessageFeedItem/MessageFeedItem';
 import { Footer } from '../../organisms/Footer/Footer';
-import { SRUHeader } from '../../organisms/Headers/SRUHeader';
-
 import './srumessageportal.css';
 import { SearchBar } from '../../molecules/SearchBar/SearchBar';
 
@@ -14,7 +12,6 @@ type SRUMessagePortalProps = {
 export const SRUMessagePortal = ({user, messages}: SRUMessagePortalProps) => {
     return (
         <div>
-            <SRUHeader links={['Home', 'Messages', 'Profile', 'Notifications']}></SRUHeader>
             <div className='SRUMessagePortal-Body'>
                 <div className='SRUMessagePortal-MessageFeed'>
                     <SearchBar label=''/>
