@@ -1,5 +1,4 @@
 import React from 'react';
-import { NCUHeader } from '../../organisms/Headers/NCUHeader';
 import { Filter } from '../../organisms/Filter/Filter';
 import { FeedItem } from '../../molecules/FeedItem/FeedItem';
 import { CompanyInfoBox } from '../../organisms/CompanyInfoBox/CompanyInfoBox';

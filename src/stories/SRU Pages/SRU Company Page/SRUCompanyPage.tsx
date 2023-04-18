@@ -7,10 +7,10 @@ import './sruCompanyPage.css'
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 
 type sruCompanyPageProps = {
-
+    user?: string,
 }
 
-export const SRUCompanyPage = ({} : sruCompanyPageProps) => {
+export const SRUCompanyPage = ({user} : sruCompanyPageProps) => {
     return (
         <div className="CompanyPage-page">
             <div className="CompanyPage-page-body">
