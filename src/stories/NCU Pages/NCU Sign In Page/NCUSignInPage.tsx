@@ -24,25 +24,8 @@ export const NCUSignInPage = ({}: SignInProps) => {
         <div className="SignIn-body">
             <NCUHeader links={['Home', 'Messages', 'Profile', 'Notifications']}></NCUHeader>
             <div className="SignIn-content-container">
-                
                 <div className="SignIn-content">
-                    {/* Sign In Form */}
                     <SignInForm></SignInForm>
-                    {/* <form onSubmit={handleSubmit}>
-                        <input 
-                        value={email} 
-                        onChange={(e) => setEmail(e.target.value)} 
-                        type="email" placeholder='Email' id='email' name='email' />
-
-                        <input 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                        type="password" placeholder='Password' id='email' name='email' />
-
-                        <button type='submit'>Sign In</button>
-
-                    </form> */}
-                    
                 </div>
             </div>
             <Footer links={['Placeholder']}></Footer>

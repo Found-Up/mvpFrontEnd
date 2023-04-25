@@ -19,6 +19,7 @@
     flex-direction: column;
     gap: 30px;
     /* align-items: center; */
+    font-size: 16px;
 }
 
 form .text-field {
@@ -35,17 +36,22 @@ form .text-field {
 .SignInForm-container input {
     width: 372px;
     height: 50px;
+    font-size: 16px;
 }
 
 .SignInForm-container input::placeholder {
     padding-left: 10px;
     color: #928B80;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .forgot-password a {
     margin-left: 10px;
-    color: #2956AD;
+    color: #928B80;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .SignInForm-container button {
@@ -61,4 +67,11 @@ form .text-field {
 
 .signup-link {
     text-align: center;
+    
 }
+
+.signup-link a {
+    text-decoration: none;
+    color: #2956AD;
+}
+
