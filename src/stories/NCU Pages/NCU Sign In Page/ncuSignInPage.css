@@ -1,0 +1,23 @@
+.SignIn-body {
+    background: #fafafa;
+}
+
+.SignIn-content-container {
+    width: 500px;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 400px;
+    border-radius: 10px;
+
+    box-shadow: 10px 10px 0 0 #2956AD;
+    border: 1px solid #2956AD;
+
+    /* box-shadow:  27px 27px 55px #d5d5d5,
+             -27px -27px 55px #ffffff;
+    background: #fafafa; */
+}
+
+.SignIn-content {
+    padding: 50px 100px;
+}
+
