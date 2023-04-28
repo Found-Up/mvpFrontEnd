@@ -1,6 +1,5 @@
 import React from 'react';
 import { MyButton } from '../../atoms/Buttons/MyButton';
-import { Primary, Secondary } from '../../atoms/Buttons/MyButton.stories';
 import './companyCard.css';
 
 type companyCardProps = {

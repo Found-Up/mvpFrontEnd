@@ -12,7 +12,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const CustomizedLinks = styled(Link)({
     font: 'Mulish',
@@ -48,40 +48,42 @@ type NCUHeaderProps = {
 
 export const NCUHeader = ({links}: NCUHeaderProps) => {
     return (
-        <AppBar sx={{ bgcolor: 'white' }} elevation={0} position='static'>
-            <CssBaseline />
-            <Toolbar>
-                <CustomizedLogo variant='h4'>
-                    Logo
-                </CustomizedLogo>
-                
-                <CustomizedDiv>
-                    <Router>
-                        <LinkContainer>
-                            <HomeOutlinedIcon sx={{ color: '#373F41' }} />
-                            <CustomizedLinks to='/'>{links[0]}</CustomizedLinks>
-                        </LinkContainer>
-                        <LinkContainer>
-                            <EmailOutlinedIcon sx={{ color: '#373F41' }} />
-                            <CustomizedLinks to='/'>{links[1]}</CustomizedLinks>
-                        </LinkContainer>
-                        <LinkContainer>
-                            <AccountCircleOutlinedIcon sx={{ color: '#373F41' }} />
-                            <CustomizedLinks to='/'>{links[2]}</CustomizedLinks>
-                        </LinkContainer>
-                        <LinkContainer>
-                            <NotificationsNoneOutlinedIcon sx={{ color: '#373F41' }} />
-                            <CustomizedLinks to='/'>{links[3]}</CustomizedLinks>
-                        </LinkContainer>
-                        <IconButton>
-                            <MenuOutlinedIcon sx={{ color: '#373F41' }} />
-                        </IconButton>
-                    </Router>
+        <>
+            <AppBar sx={{ bgcolor: 'white' }} elevation={0} position='static'>
+                <CssBaseline />
+                <Toolbar>
+                    <CustomizedLogo variant='h4'>
+                        <Link to='/NCU/Home'>Logo</Link>
+                    </CustomizedLogo>
                     
-                </CustomizedDiv>
+                    <CustomizedDiv>
+                            <LinkContainer>
+                                <HomeOutlinedIcon sx={{ color: '#373F41' }} />
+                                <CustomizedLinks to='/NCU/Home'>{links[0]}</CustomizedLinks>
+                            </LinkContainer>
+                            <LinkContainer>
+                                <EmailOutlinedIcon sx={{ color: '#373F41' }} />
+                                <CustomizedLinks to='/NCU/Messages'>{links[1]}</CustomizedLinks>
+                            </LinkContainer>
+                            <LinkContainer>
+                                <AccountCircleOutlinedIcon sx={{ color: '#373F41' }} />
+                                <CustomizedLinks to='/NCU/Profile'>{links[2]}</CustomizedLinks>
+                            </LinkContainer>
+                            <LinkContainer>
+                                <NotificationsNoneOutlinedIcon sx={{ color: '#373F41' }} />
+                                <CustomizedLinks to='/'>{links[3]}</CustomizedLinks>
+                            </LinkContainer>
+                            <IconButton>
+                                <MenuOutlinedIcon sx={{ color: '#373F41' }} />
+                            </IconButton>
+                    </CustomizedDiv>
 
-                
-            </Toolbar>
-        </AppBar>
+                    
+                </Toolbar>
+            </AppBar>
+            <div>
+                <Outlet />
+            </div>
+        </>
     )
 };

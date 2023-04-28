@@ -1,5 +1,4 @@
 import React from 'react';
-import { NCUHeader } from '../../organisms/Headers/NCUHeader';
 import { Footer } from '../../organisms/Footer/Footer';
 import { ProfileCard } from '../../organisms/ProfileCard/ProfileCard';
 import { RecentPostItem } from '../../molecules/RecentPostItem/RecentPostItem';
@@ -16,9 +15,6 @@ type sruProfilePageProps = {
 export const SRUProfilePage = ({} : sruProfilePageProps) => {
     return (
         <div className="page">
-            <div className="page-header">
-                <NCUHeader links={['Home', 'Messages', 'Profile', 'Notifications']}></NCUHeader>
-            </div>
 
             <div className="page-body">
                 <div className="ProfilePage-ProfileCard-container">

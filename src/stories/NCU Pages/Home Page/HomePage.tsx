@@ -1,5 +1,4 @@
 import React from 'react';
-import { NCUHeader } from '../../organisms/Headers/NCUHeader';
 import { Filter } from '../../organisms/Filter/Filter';
 import { FeedItem } from '../../molecules/FeedItem/FeedItem';
 import { CompanyInfoBox } from '../../organisms/CompanyInfoBox/CompanyInfoBox';
@@ -13,7 +12,6 @@ export const HomePage = ({user}: HomePageProps ) => {
     return (
         <div>
             <div className='HomePage-Header'>
-                <NCUHeader links={['Home','Messages','Profile','Notifications']}></NCUHeader>
                 <Filter name='Filters' filters={['Time', 'Engagement', 'Industry', 'Experience']} sortBy={true}></Filter>
             </div>
             <div className='HomePage-Body'>

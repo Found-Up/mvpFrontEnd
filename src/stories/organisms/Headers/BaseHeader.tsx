@@ -6,7 +6,7 @@ import {
   Typography,
   styled,
 } from '@mui/material';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { Button } from '../../atoms/Buttons/Button';
 import './baseheader.css';
 
@@ -40,30 +40,33 @@ type BaseHeaderProps = {
 
 export const BaseHeader = ({links}: BaseHeaderProps) => {
   return (
-    <AppBar sx={{ bgcolor: 'white' }} elevation={0} position='static'>
-      <CssBaseline/>
-      <Toolbar>
-        <CustomizedLogo variant='h4'>Logo</CustomizedLogo>
-        <div className='BaseHeader-Nav'>
-          <Router>
-            <LinkContainer>
-              <CustomizedLinks to='./'>{links[0]}</CustomizedLinks>
-            </LinkContainer>
-            <LinkContainer>
-              <CustomizedLinks to='./'>{links[1]}</CustomizedLinks>
-            </LinkContainer>
-            <LinkContainer>
-              <CustomizedLinks to='./'>{links[2]}</CustomizedLinks>
-            </LinkContainer>
-            <LinkContainer>
-              <CustomizedLinks to='./'>{links[3]}</CustomizedLinks>
-            </LinkContainer>
-          </Router>
-        </div>
-        <div className='BaseHeader-LoginBtn'>
-          <Button primary={true} size='medium' label='Log In'></Button>
-        </div>
-      </Toolbar>
-    </AppBar>
+    <>
+      <AppBar sx={{ bgcolor: 'white' }} elevation={0} position='static'>
+        <CssBaseline/>
+        <Toolbar>
+          <CustomizedLogo variant='h4'>Logo</CustomizedLogo>
+          <div className='BaseHeader-Nav'>
+              <LinkContainer>
+                <CustomizedLinks to='/'>{links[0]}</CustomizedLinks>
+              </LinkContainer>
+              <LinkContainer>
+                <CustomizedLinks to='/'>{links[1]}</CustomizedLinks>
+              </LinkContainer>
+              <LinkContainer>
+                <CustomizedLinks to='/'>{links[2]}</CustomizedLinks>
+              </LinkContainer>
+              <LinkContainer>
+                <CustomizedLinks to='/'>{links[3]}</CustomizedLinks>
+              </LinkContainer>
+          </div>
+          <div className='BaseHeader-LoginBtn'>
+            <Button primary={true} size='medium' label='Log In'></Button>
+          </div>
+        </Toolbar>
+      </AppBar>
+      <div>
+        <Outlet />
+      </div>
+    </>
   )
 }
