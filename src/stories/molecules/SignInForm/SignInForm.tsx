@@ -1,6 +1,5 @@
-import React, { MouseEvent, useState } from 'react';
-import { Button } from '../../atoms/Buttons/Button';
-
+import React, { useState } from 'react';
+import { useLogin } from '../../../hooks/useLogin';
 import './signInForm.css'
 
 
@@ -11,10 +10,11 @@ type SignInFormProps = {
 export const SignInForm = ({}: SignInFormProps) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const {login, error, isLoading} = useLogin();
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(email);
+        await login(email, password);
     }
 
     return (
@@ -39,7 +39,9 @@ export const SignInForm = ({}: SignInFormProps) => {
                     <a href="">Forgot password?</a>
                 </div>
 
-                <button type='submit'>Sign In</button>
+                <button disabled={isLoading} type='submit'>Sign In</button>
+                
+                {error && <div className="error">{error}</div>}
 
                 <div className="signup-link">
                     Dont have an account? <a href="">Sign Up</a>

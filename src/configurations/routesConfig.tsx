@@ -1,5 +1,6 @@
 import { HomePage } from "../stories/NCU Pages/Home Page/HomePage";
 import { MessagePortal } from "../stories/NCU Pages/Message Portal/MessagePortal";
+import { NCUSignInPage } from "../stories/NCU Pages/NCU Sign In Page/NCUSignInPage";
 import { ProfilePage } from "../stories/NCU Pages/Profile Page/ProfilePage";
 import { WelcomePage } from "../stories/NCU Pages/Welcome Page/WelcomePage";
 import { SRUMessagePortal } from "../stories/SRU Pages/Message Portal/SRUMessagePortal";
@@ -15,6 +16,10 @@ export const routesConfig = [
       {
         path: "/",
         element: <WelcomePage />,
+      },
+      {
+        path: "/login",
+        element: <NCUSignInPage />
       },
     ],
   },

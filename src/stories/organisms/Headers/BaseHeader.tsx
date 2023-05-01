@@ -60,7 +60,7 @@ export const BaseHeader = ({links}: BaseHeaderProps) => {
               </LinkContainer>
           </div>
           <div className='BaseHeader-LoginBtn'>
-            <Button primary={true} size='medium' label='Log In'></Button>
+            <Link to='login'><Button primary={true} size='medium' label='Log In'></Button></Link>
           </div>
         </Toolbar>
       </AppBar>

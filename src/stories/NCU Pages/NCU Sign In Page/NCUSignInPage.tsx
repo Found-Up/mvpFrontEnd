@@ -22,7 +22,6 @@ export const NCUSignInPage = ({}: SignInProps) => {
 
     return (
         <div className="SignIn-body">
-            <NCUHeader links={['Home', 'Messages', 'Profile', 'Notifications']}></NCUHeader>
             <div className="SignIn-content-container">
                 <div className="SignIn-content">
                     <SignInForm></SignInForm>
