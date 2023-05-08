@@ -7,21 +7,29 @@ import './profilePage.css'
 
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
+import { useLoaderData, useNavigation } from 'react-router-dom';
+import { NcuProfile } from '../../../types/ncu/ncuProfile';
 
 type ProfilePageProps = {
     user : string
 }
 
 export const ProfilePage = ({user} : ProfilePageProps) => {
+    const userProfileData = useLoaderData() as NcuProfile;
+    const navigation = useNavigation();
+
+    if (navigation.state === "loading") {
+        return <h1> Loading ... </h1>
+    }
+
     return (
         <div className="ProfilePage-page">
             <div className="ProfilePage-body">
                 <div className="ProfilePage-ProfileCard-container">
                     <ProfileCard 
-                        fullName='Matthew Chin'
-                        tagline='I am a computer engineer and I like to ball'
-                        description='Currently a software developer @ Pond, 
-                            previously a computer engineer @ FoundUp'
+                        fullName={userProfileData.first_name + ' ' + userProfileData.last_name}
+                        tagline={userProfileData.headline}
+                        description={userProfileData.biography}
                         profileImgSrc='./logo192png'
                     ></ProfileCard>
                 </div>
@@ -31,24 +39,8 @@ export const ProfilePage = ({user} : ProfilePageProps) => {
                             <WorkOutlineIcon/>
                             <h4>Experience</h4>
                         </div>
-                        <ExpCard
-                            expImgSrc=''
-                            role='Software Engineer'
-                            company='Pond'
-                            date='Jan 2021 - Current'
-                        ></ExpCard>
-                        <ExpCard
-                            expImgSrc=''
-                            role='Software Engineer'
-                            company='Pond'
-                            date='Jan 2021 - Current'
-                        ></ExpCard>
-                        <ExpCard
-                            expImgSrc=''
-                            role='Software Engineer'
-                            company='Pond'
-                            date='Jan 2021 - Current'
-                        ></ExpCard>
+                        {userProfileData.experience.map((exp) => 
+                            <ExpCard expImgSrc={''} role={exp.job_title} company={exp.company_name} date={exp.start_date + ' - ' + exp.end_date} />)}
                     </div>
 
                     <div className="ProfilePage-Edu-container">
@@ -56,15 +48,10 @@ export const ProfilePage = ({user} : ProfilePageProps) => {
                             <SchoolOutlinedIcon/>
                             <h4>Education</h4>
                         </div>
-                        <EduCard
-                            eduImgSrc=''
-                            major='Computer Engineer'
-                            school='Texas A&M University'
-                            date='2018 - 2022'
-                        ></EduCard>
+                        {userProfileData.education.map((edu) => 
+                            <EduCard eduImgSrc={''} major={'NEED TO ADD THIS'} school={edu.university_name} date={edu.start_year + ' - ' + edu.end_year} />)}
                     </div>
-                </div>
-                
+                </div>  
             </div>
             <div className="ProfilePage-footer">
                 <Footer links={['Placeholder']}></Footer>

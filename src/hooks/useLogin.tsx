@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useAuthContext } from "./useAuthContext";
 import { AuthActionTypes } from "../types/auth/auth.types";
+import { useNavigate } from "react-router-dom";
 
 export const useLogin = () => {
   const [error, setError] = useState<boolean | undefined>();
   const [isLoading, setIsLoading] = useState<boolean | undefined>();
   const { dispatch } = useAuthContext();
+  const navigate = useNavigate();
 
   const login = async (username: any, password: any) => {
     setIsLoading(true);
@@ -28,6 +30,14 @@ export const useLogin = () => {
       dispatch({type: AuthActionTypes.LOGIN, payload: json});
 
       setIsLoading(false);
+
+      if (json.user_type === 'NCU') {
+        return navigate('/NCU/Home');
+      }
+      if (json.user_type === 'SRU') {
+        return navigate('SRU/Home');
+      }
+
     }
   }
 

@@ -2,6 +2,7 @@ import { HomePage } from "../stories/NCU Pages/Home Page/HomePage";
 import { MessagePortal } from "../stories/NCU Pages/Message Portal/MessagePortal";
 import { NCUSignInPage } from "../stories/NCU Pages/NCU Sign In Page/NCUSignInPage";
 import { ProfilePage } from "../stories/NCU Pages/Profile Page/ProfilePage";
+import { NcuProfilePageLoader } from "../stories/NCU Pages/Profile Page/ncuProfilePageLoader";
 import { WelcomePage } from "../stories/NCU Pages/Welcome Page/WelcomePage";
 import { SRUMessagePortal } from "../stories/SRU Pages/Message Portal/SRUMessagePortal";
 import { SRUCompanyPage } from "../stories/SRU Pages/SRU Company Page/SRUCompanyPage";
@@ -34,6 +35,7 @@ export const routesConfig = [
       {
         path: "Profile",
         element: <ProfilePage user={""} />,
+        loader: NcuProfilePageLoader,
       },
       {
         path: "Messages",
